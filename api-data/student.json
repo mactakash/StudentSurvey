@@ -1,0 +1,94 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "name": "Akash",
+      "address": "Bangalore",
+      "mobile": "9806348736",
+      "email": "akash@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "MS Dhoni",
+      "home_town": "Jabalpur"
+    },
+    {
+      "name": "Akash",
+      "address": "Bangalore",
+      "mobile": "9806348736",
+      "email": "akash@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "MS Dhoni",
+      "id": 6,
+      "home_town": "Jabalpur"
+    },
+    {
+      "name": "Aquib Akhtar",
+      "address": "Hyderabad",
+      "mobile": "9752135759",
+      "email": "aquibgic@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "Sachin Tendulkar",
+      "home_town": "Bangalore",
+      "id": 7
+    },
+    {
+      "name": "Aquib Akhtar",
+      "address": "Hyderabad",
+      "mobile": "9752135759",
+      "email": "aquibgic@gmail.com",
+      "hobbie": "Watching Football",
+      "rolemodel": "MS Dhoni",
+      "home_town": "Bhopal",
+      "id": 8
+    },
+    {
+      "name": "Aquib Akhtar",
+      "address": "Hyderabad",
+      "mobile": "9752135759",
+      "email": "aquibgic@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "Sachin Tendulkar",
+      "home_town": "Bangalore",
+      "id": 9
+    },
+    {
+      "name": "Aquib Akhtar",
+      "address": "Hyderabad",
+      "mobile": "9752135759",
+      "email": "aquibgic@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "Sachin Tendulkar",
+      "home_town": "Bangalore",
+      "id": 10
+    },
+    {
+      "name": "Aquib Akhtar",
+      "address": "Hyderabad",
+      "mobile": "09752135759",
+      "email": "aquibgic@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "Sachin Tendulkar",
+      "home_town": "Bangalore",
+      "id": 11
+    },
+    {
+      "name": "Aquib Akhtar",
+      "address": "Hyderabad",
+      "mobile": "09752135759",
+      "email": "aquibgic@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "Sachin Tendulkar",
+      "home_town": "Bangalore",
+      "id": 12
+    },
+    {
+      "name": "Aquib Akhtar",
+      "address": "Hyderabad",
+      "mobile": "9752135759",
+      "email": "aquibgic@gmail.com",
+      "hobbie": "Playing Cricket",
+      "rolemodel": "Sachin Tendulkar",
+      "home_town": "Bangalore",
+      "id": 13
+    }
+  ]
+}

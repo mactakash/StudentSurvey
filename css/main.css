@@ -1,0 +1,26 @@
+body {
+    background-image: url("paper.gif");
+    background-color: #cccccc;
+}
+
+h2 {
+    margin: 0;
+}
+
+.customBorder {
+    margin: 10px;
+}
+
+form label {
+    text-align: left !important;
+}
+
+form button {
+    padding: 5px 30px !important;
+}
+
+.surveySubmit {
+    margin-top: 19px;
+    margin-bottom: -30px;
+}
+

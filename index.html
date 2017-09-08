@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 align="center">Student Survey Application</h2>
+    </div>
+    <div class="panel-body">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default" id="p-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Personal Information</a> <i class="fa fa-check hide" id="personal-save-tick" aria-hidden="true"></i>
+                        </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form class="form-horizontal formMargin" action="#" name="personal-data">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="name">Name:</label>
+                                <div class="col-sm-6">
+                                    <input type="name" class="form-control" id="name" placeholder="Enter Name" ng-model="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="address">Adrress:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="address" placeholder="Enter Address" ng-model="address" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="mobile">Mobile:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile Number" ng-model="mobile" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                <div class="col-sm-6">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter Email" ng-model="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-8">
+                                    <button type="submit" class="btn btn-success pull-right" ng-click="savePersonal()">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" id="g-info">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">General Information</a> <i class="fa fa-check hide" id="gereral-save-tick" aria-hidden="true"></i>
+        </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <form class="form-horizontal formMargin" action="#">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="hobbie">Hobbie:</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" " ng-model="selectedName " ng-options="x for x in hobbies ">{{selectedName}}</select>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label col-sm-2 " for="role ">Role Model:</label>
+                                    <div class="col-sm-6 ">
+                                        <select class="form-control "  ng-model="selectedRolemodel " ng-options="x for x in rolemodel ">{{selectedRolemodel}}</select>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label col-sm-2 " for="home ">Home Town:</label>
+                                    <div class="col-sm-6 ">
+                                        <select class="form-control " ng-model="selectedHomeTown " ng-options="x for x in hometown">{{selectedHomeTown}}</select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-6 ">
+                                        <button type="submit " class="btn btn-success pull-right" ng-click="saveGeneral()">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="panel-heading hide" align="center" id="submitSurverData" >
+            <button type="button" class="btn btn-success" ng-click="finalSubmit()">Submit Survey</button>
+        </div>
+
+            
+            <div class="panel panel-default hide" id="sucess-msg">
+                    <div class="panel-heading" align="center">
+                        <h3 class="panel-title">
+          <a data-toggle="collapse " data-parent="#accordion" href="#collapse3" style="color: green; ">Congratulation Survey Completed Successfully!</a>
+        </h3>
+                    </div>
+ 
+                </div><div align="center" class="hide" id="view-btn" style="margin-top: 13px;">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">View Submission</button>
+                </div>  
+        </div>
+    </div>
+
+    </div>
+            </div>
+        </div>
+    </div>
+ 
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: cadetblue;">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Welcome {{returnData.name}}</h4>
+      </div>
+      <div class="modal-body">
+        <p>Your name: {{returnData.name}}</p>
+        <p>Your Mobile Numbar: {{returnData.mobile}}</p>
+        <p>Your Address: {{returnData.address}}</p>
+        <p>Your Email: {{returnData.email}}</p>
+        <p>Your Rolemodel: {{returnData.rolemodel}}</p>
+        <p>Your Hometown: {{returnData.home_town}}</p>
+        <p>Your Hobbie: {{returnData.hobbie}}</p>
+      </div>
+      <div class="modal-footer" style="background-color: cadetblue;">
+        <button type="button" class="btn btn-default panel-footer" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>    
+<script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js "></script>
+<script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js "></script>
+<script type="text/javascript " src="script/app.js "></script>
+</body>
+
+</html>
